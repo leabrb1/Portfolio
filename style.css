@@ -1,0 +1,309 @@
+*{
+  margin:0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+/*page home*/
+header{
+  height: 100vh;
+}
+
+
+section{
+  height: 100vh;
+}
+.section{
+}
+
+.logo>img {
+  width: 200px;
+  height: 200px;
+  background-image: url(images/logo.png);
+ }
+
+ .logo{
+   display: flex;
+   justify-content: center;
+   margin-top: 7%;
+ }
+
+#prénom {
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
+}
+
+h1 {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 5%;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  margin-top: 10%;
+}
+
+h2 {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 5%;
+  font-size: 20px;
+  margin-top: 5%;
+  font-weight: lighter;
+}
+
+/*page about*/
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+}
+
+p {
+  margin-top: 10%;
+  margin-right: 15%;
+  line-height: 300%;
+  font-weight: lighter;
+  margin-left: 15%;
+  text-align: justify;
+  color: grey;
+}
+
+.bouton a {
+  display: block;
+  background-color: white;
+  border: solid 2px black;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 2%;
+  width: 30%;
+  height: 10%;
+  /*transition: all 0.5s;*/
+  cursor: pointer;
+  margin-left: 15%;
+  margin-top: 4%;
+  text-decoration: none;
+}
+
+.bouton a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bouton a :after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.bouton:hover a {
+  padding-right: 15px;
+}
+
+.bouton:hover a:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo>img {
+  display: flex;
+  width: 669px;
+  height: 500px;
+  /*border: solid 1px black;*/
+  background-image: url(images/oim3.jpg);
+ }
+
+/*page projet*/
+
+img {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  height:250px;
+}
+
+.rang{
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 17%;
+}
+
+.rang:nth-child(2){
+  margin-top: 4%;
+}
+
+a> img{
+  border: solid 1px black;
+}
+
+.class_test {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+    .class_test:hover p.text {
+        opacity: 1;
+        font-size: 150%;
+    }
+
+.class_test p.text {
+    font-size: 150%;
+    color: #FFF;
+    width: 251px;
+    height: 251px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    top: 0;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+/*page contact*/
+#contact{
+  align-items: center;
+}
+.reseaux{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-content: center;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.msg{
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  background-color: #F0EEEE;
+  justify-content: center;
+}
+
+.msg> h2{
+  font-size: 350%;
+  font-family: 'Amatic SC', cursive;
+}
+.fleur{
+  display: flex;
+  justify-content: center;
+}
+.fleur>img {
+  width: 420px;
+  height: 420px;
+ }
+
+.linkedin{
+  background-image: url(images/lk.png);
+  height: 32px;
+  width: 32px;
+  background-size: cover;
+}
+
+
+.mail{
+  background-image: url(images/mail.png);
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+}
+
+.phone{
+  background-image: url(images/phone.png);
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+}
+
+/*.phone:hover {
+  content: '06 04 50 89 63';
+}*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  display: flex;
+  max-height: 30%;
+  overflow: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
